@@ -1,5 +1,5 @@
 ---
-name: audit-book-writing-review
+name: audit-book-writing-v1
 description: Write comprehensive audit books and review materials with systematic workflow. Use when writing audit survey books, practical guides, case analyses, or review materials on topics like financial audit, internal control audit, compliance audit, performance audit, IT audit, internal audit, government audit. Triggers on requests for "审计书籍", "审计综述", "审计实务", "写书", "审校", "审计案例分析", or mentions of writing audit-related books or review materials.
 allowed-tools:
   - Read
