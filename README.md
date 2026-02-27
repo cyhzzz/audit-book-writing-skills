@@ -5,8 +5,8 @@
 **审计专业书籍撰写、审核、优化完整工具集**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/Version-1.0.0-blue.svg)](https://github.com/wuying/audit-book-writing-skills)
-[![Skills](https://img.shields.io/badge/Skills-1-green.svg)](#available-skills)
+[![Version](https://img.shields.io/badge/Version-3.0-blue.svg)](https://github.com/cyhzzz/audit-book-writing-skills)
+[![Skills](https://img.shields.io/badge/Skills-3-green.svg)](#available-skills)
 [![Plugins](https://img.shields.io/badge/Plugins-4-purple.svg)](#integrated-plugins)
 [![Laws](https://img.shields.io/badge/Laws-100-red.svg)](#legal-knowledge-base)
 
@@ -16,7 +16,7 @@
 
 ## 📖 概述
 
-**Audit Book Writing Pro Skills** 是专为审计专业书籍设计的完整工具集，提供从撰写、审核到优化的全流程支持。
+**Audit Book Writing Pro Skills** 是专为审计专业书籍设计的完整工具集，提供从撰写、审核到优化的全流程支持。本仓库包含三个版本，用户可以根据需求灵活选择使用。
 
 ### 核心特点
 
@@ -36,23 +36,50 @@
 
 ---
 
+## 🔄 版本对比
+
+| 特性 | v1.0（基础版） | v2.0（增强版） | v3.0（完整版） |
+|------|--------------|--------------|--------------|
+| 7阶段工作流 | ✅ | ✅ | ✅ |
+| 4轮评审系统 | ✅ | ✅ | ✅ |
+| 标准章节模板 | ✅ | ✅ | ✅ |
+| 数据验证规范 | ✅ | ✅ | ✅ |
+| 双模式优化 | ❌ | ✅ | ✅ |
+| 多文件留痕输出 | ❌ | ✅ | ✅ |
+| 法律法规库（100个文件） | ❌ | ✅ | ✅ |
+| 智能插件系统 | ❌ | ❌ | ✅ |
+| 法规校对（ChatLaw） | ❌ | ❌ | ✅ |
+| 逻辑分析（ai-research-skills） | ❌ | ❌ | ✅ |
+| 术语校对（lexnlp） | ❌ | ❌ | ✅ |
+| 文献校对（zotero-better-bibtex） | ❌ | ❌ | ✅ |
+| 单元测试 | ❌ | ❌ | ✅ |
+| 适用场景 | 快速撰写、初学者 | 严格质量控制、多文件留痕 | 专业用户、智能校对 |
+| 响应速度 | 最快 | 快快 | 较快（插件处理） |
+
+---
+
 ## 🚀 快速开始
 
 ### Claude Code 用户（推荐）
 
 ```bash
 # 添加 marketplace
-/plugin marketplace add wuying/audit-book-writing-skills
+/plugin marketplace add cyhzzz/audit-book-writing-skills
 
 # 安装所有技能
-/plugin install all-skills@audit-book-writing-skills
+/plugin install all-skills@cyhzzz/audit-book-writing-skills
+
+# 或安装单个技能
+/plugin install audit-book-writing-pro@cyhzzz/audit-book-writing-skills
+/plugin install audit-book-writing-v2@cyhzzz/audit-book-writing-skills
+/plugin install audit-book-writing-v1@cyhzzz/audit-book-writing-skills
 ```
 
 ### 其他用户
 
 ```bash
 # 通用安装器
-npx ai-agent-skills install wuying/audit-book-writing-skills
+npx ai-agent-skills install cyhzzz/audit-book-writing-skills
 ```
 
 详细安装指南请参考 [INSTALLATION.md](INSTALLATION.md)
@@ -61,11 +88,11 @@ npx ai-agent-skills install wuying/audit-book-writing-skills
 
 ## 📋 可用技能
 
-### audit-book-writing-pro
+### audit-book-writing-pro (v3.0 - 完整版)
 
 **审计专业书籍撰写系统**
 
-**版本**: 1.0.0
+**版本**: 3.0
 **路径**: `audit-book-writing-pro/`
 
 **核心功能**:
@@ -75,6 +102,7 @@ npx ai-agent-skills install wuying/audit-book-writing-skills
 - 法律法规知识库（100个法规文件）
 - 审计应用指引模板（800-1500字）
 - 审计案例启示模板（800-1500字）
+- **智能插件系统**（ChatLaw、ai-research-skills、lexnlp、zotero-better-bibtex）
 
 **支持的领域**:
 - 文化遗产审计 (Cultural Heritage Audit)
@@ -83,9 +111,52 @@ npx ai-agent-skills install wuying/audit-book-writing-skills
 - 内部审计 (Internal Audit)
 - 合规审计 (Compliance Audit)
 
+**适用场景**: 专业用户，需要智能插件支持和完整的质量控制
+
 ---
 
-## 🔌 集成插件
+### audit-book-writing-v2 (v2.0 - 增强版)
+
+**审计书籍撰写与评审增强版**
+
+**版本**: 2.0
+**路径**: `audit-book-writing-v2/`
+
+**核心功能**:
+- 四轮评审系统（内容准确性、逻辑连贯性、适用性、格式规范化）
+- 双模式优化（修订模式：95%-120%字数控制；重构模式：大幅调整）
+- 多文件留痕输出（5个评审文件 + 1个优化稿）
+- 法律法规知识库（100个法规文件）
+- 审计应用指引模板（800-1500字）
+- 审计案例启示模板（800-1500字）
+
+**适用场景**: 需要严格质量控制和多文件留痕的用户，但不需要智能插件
+
+**详细文档**: [audit-book-writing-v2/VERSION.md](audit-book-writing-v2/VERSION.md)
+
+---
+
+### audit-book-writing-v1 (v1.0 - 基础版)
+
+**审计书籍撰写与评审基础版**
+
+**版本**: 1.0
+**路径**: `audit-book-writing-v1/`
+
+**核心功能**:
+- 7阶段工作流（从项目初始化到最终审校）
+- 4轮评审系统（内容准确性、逻辑连贯性、适用性、格式规范化）
+- 标准章节模板（理论章、实务章、案例章、法规解读章）
+- 数据验证规范（防止编造数据和引用材料）
+- 审计领域分类（财务审计、内部控制审计、合规审计等）
+
+**适用场景**: 快速撰写审计书籍初稿、系统化审计实务指南编写
+
+**详细文档**: [audit-book-writing-v1/VERSION.md](audit-book-writing-v1/VERSION.md)
+
+---
+
+## 🔌 集成插件（v3.0专用）
 
 ### Phase 3 插件系统
 
@@ -104,7 +175,7 @@ npx ai-agent-skills install wuying/audit-book-writing-skills
 
 ---
 
-## 📚 法律法规知识库
+## 📚 法律法规知识库（v2.0和v3.0）
 
 ### 知识库统计
 
@@ -132,10 +203,11 @@ npx ai-agent-skills install wuying/audit-book-writing-skills
 
 - [MARKETPLACE.md](MARKETPLACE.md) - 技能市场元数据
 - [INSTALLATION.md](INSTALLATION.md) - 完整安装指南
-- [PROJECT-OVERVIEW.md](audit-book-writing-pro/PROJECT-OVERVIEW.md) - 项目概览
-- [SKILL.md](audit-book-writing-pro/SKILL.md) - 核心技能文档
+- [PROJECT-OVERVIEW.md](audit-book-writing-pro/PROJECT-OVERVIEW.md) - v3.0项目概览
+- [audit-book-writing-v2/VERSION.md](audit-book-writing-v2/VERSION.md) - v2.0版本说明
+- [audit-book-writing-v1/VERSION.md](audit-book-writing-v1/VERSION.md) - v1.0版本说明
 
-### Phase 3 实施报告
+### Phase 3 实施报告（v3.0）
 
 - [Phase 3 第1步：集成ChatLaw](audit-book-writing-pro/docs/phase3-step1-集成ChatLaw实施报告.md)
 - [Phase 3 第2步：集成ai-research-skills](audit-book-writing-pro/docs/phase3-step2-集成ai-research-skills实施报告.md)
@@ -183,7 +255,7 @@ npx ai-agent-skills install wuying/audit-book-writing-skills
 
 ## 💡 使用示例
 
-### 示例1：优化审计书籍章节（修订模式）
+### 示例1：使用v3.0优化审计书籍章节（修订模式）
 
 ```
 请使用 audit-book-writing-pro 技能，使用修订模式优化以下章节：
@@ -200,13 +272,14 @@ npx ai-agent-skills install wuying/audit-book-writing-skills
 
 技能将：
 1. 执行四轮评审（内容准确性、逻辑连贯性、适用性、格式规范化）
-2. 生成5个评审文件 + 1个优化稿
-3. 字数控制在原稿的95%-120%
+2. 调用智能插件（ChatLaw、ai-research-skills、lexnlp、zotero-better-bibtex）
+3. 生成5个评审文件 + 1个优化稿
+4. 字数控制在原稿的95%-120%
 
-### 示例2：优化审计书籍章节（重构模式）
+### 示例2：使用v2.0优化审计书籍章节（重构模式）
 
 ```
-请使用 audit-book-writing-pro 技能，使用重构模式优化以下章节：
+请使用 audit-book-writing-v2 技能，使用重构模式优化以下章节：
 
 # 第5章 内部控制审计
 
@@ -218,10 +291,28 @@ npx ai-agent-skills install wuying/audit-book-writing-skills
 2. 提出结构优化方案并等待确认
 3. 用户确认后执行四轮评审
 4. 生成重构后的优化稿
+5. 使用法律法规库进行法规校对
+
+### 示例3：使用v1.0快速撰写审计书籍
+
+```
+请使用 audit-book-writing-v1 技能，帮我撰写以下章节：
+
+# 第2章 审计的基本概念
+- 审计的定义
+- 审计的分类
+- 审计的功能
+```
+
+技能将：
+1. 按照7阶段工作流执行
+2. 使用标准章节模板
+3. 执行4轮评审
+4. 生成审计书籍初稿
 
 ---
 
-## 🧪 测试
+## 🧪 测试（v3.0）
 
 ### 运行单元测试
 
@@ -258,31 +349,42 @@ audit-book-writing-skills/
 ├── LICENSE                            # MIT License
 ├── MARKETPLACE.md                     # 技能市场元数据
 ├── INSTALLATION.md                     # 安装指南
-└── audit-book-writing-pro/             # 主技能
+├── audit-book-writing-pro/             # v3.0（完整版）
+│   ├── SKILL.md                        # 核心技能文档
+│   ├── PROJECT-OVERVIEW.md             # 项目概览
+│   ├── references/                     # 参考文件
+│   │   ├── audit-book-templates.md     # 审计书籍模板
+│   │   ├── audit-knowledge-base.md     # 审计知识库
+│   │   ├── domains-workflow.md         # 审计领域工作流
+│   │   └── laws-database/             # 法律法规库（100个文件）
+│   ├── docs/                          # 文档
+│   │   └── phase3-*.md               # Phase 3 实施报告
+│   ├── src/                           # 源代码
+│   │   └── plugins/                   # 插件系统
+│   │       ├── base.py
+│   │       ├── manager.py
+│   │       ├── chatlaw_adapter.py
+│   │       ├── ai_research_skills_adapter.py
+│   │       ├── lexnlp_adapter.py
+│   │       └── zotero_bibtex_adapter.py
+│   ├── tests/                         # 测试
+│   │   └── plugins/
+│   └── assets/                        # 资源文件
+├── audit-book-writing-v2/              # v2.0（增强版）
+│   ├── SKILL.md                        # 核心技能文档
+│   ├── VERSION.md                      # 版本说明
+│   └── references/                     # 参考文件
+│       ├── audit-book-templates.md
+│       ├── audit-knowledge-base.md
+│       ├── domains-workflow.md
+│       └── laws-database/             # 法律法规库（100个文件）
+└── audit-book-writing-v1/              # v1.0（基础版）
     ├── SKILL.md                        # 核心技能文档
-    ├── PROJECT-OVERVIEW.md             # 项目概览
-    ├── references/                     # 参考文件
-    │   ├── audit-book-templates.md     # 审计书籍模板
-    │   ├── audit-knowledge-base.md     # 审计知识库
-    │   ├── domains-workflow.md         # 审计领域工作流
-    │   └── laws-database/             # 法律法规库（100个文件）
-    ├── docs/                          # 文档
-    │   └── phase3-*.md               # Phase 3 实施报告
-    ├── src/                           # 源代码
-    │   └── plugins/                   # 插件系统
-    │       ├── base.py                # 插件基类
-    │       ├── manager.py             # 插件管理器
-    │       ├── chatlaw_adapter.py     # ChatLaw适配器
-    │       ├── ai_research_skills_adapter.py  # ai-research-skills适配器
-    │       ├── lexnlp_adapter.py      # lexnlp适配器
-    │       └── zotero_bibtex_adapter.py # zotero-better-bibtex适配器
-    ├── tests/                         # 测试
-    │   └── plugins/
-    │       ├── test_chatlaw_adapter.py
-    │       ├── test_ai_research_skills_adapter.py
-    │       ├── test_lexnlp_adapter.py
-    │       └── test_zotero_bibtex_adapter.py
-    └── assets/                        # 资源文件
+    ├── VERSION.md                      # 版本说明
+    ├── WORKFLOW.md                     # 7阶段工作流
+    ├── TEMPLATES.md                    # 模板文件
+    ├── DOMAINS.md                      # 审计领域分类
+    └── DATA_VERIFICATION.md            # 数据验证规范
 ```
 
 ---
@@ -316,16 +418,9 @@ audit-book-writing-skills/
 
 ## 📧 支持
 
-- **Issues**: https://github.com/wuying/audit-book-writing-skills/issues
-- **Discussions**: https://github.com/wuying/audit-book-writing-skills/discussions
+- **Issues**: https://github.com/cyhzzz/audit-book-writing-skills/issues
+- **Discussions**: https://github.com/cyhzzz/audit-book-writing-skills/discussions
 - **Documentation**: [审计书籍撰写专业版文档](audit-book-writing-pro/)
-
----
-
-## 🙏 致谢
-
-- 参考了 [finance_aigc_skills](https://github.com/cyhzzz/finance_aigc_skills) 的多技能仓库框架
-- 感谢所有为审计专业写作工具做出贡献的开发者
 
 ---
 
