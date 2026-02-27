@@ -94,6 +94,7 @@ npx ai-agent-skills install cyhzzz/audit-book-writing-skills
 
 详细安装指南请参考 [INSTALLATION.md](INSTALLATION.md)
 
+也可直接下载源码，将对应版本的文件夹移动至对应AI应用的skill文件夹内使用，或将文件夹压缩为.skill格式的技能文件根据对应产品的技能安装说明进行安装使用。
 ---
 
 ## 📋 可用技能
@@ -252,13 +253,6 @@ npx ai-agent-skills install cyhzzz/audit-book-writing-skills
 - [audit-book-writing-v2/VERSION.md](audit-book-writing-v2/VERSION.md) - v2.0版本说明
 - [audit-book-writing-v1/VERSION.md](audit-book-writing-v1/VERSION.md) - v1.0版本说明
 
-### Phase 3 实施报告（v3.0）
-
-- [Phase 3 第1步：集成ChatLaw](audit-book-writing-pro/docs/phase3-step1-集成ChatLaw实施报告.md)
-- [Phase 3 第2步：集成ai-research-skills](audit-book-writing-pro/docs/phase3-step2-集成ai-research-skills实施报告.md)
-- [Phase 3 第3步：集成lexnlp](audit-book-writing-pro/docs/phase3-step3-集成lexnlp实施报告.md)
-- [Phase 3 第4步：集成zotero-better-bibtex](audit-book-writing-pro/docs/phase3-step4-集成zotero-better-bibtex实施报告.md)
-
 ---
 
 ## 🎯 核心原则
@@ -354,35 +348,6 @@ npx ai-agent-skills install cyhzzz/audit-book-writing-skills
 2. 使用标准章节模板
 3. 执行4轮评审
 4. 生成审计书籍初稿
-
----
-
-## 🧪 测试（v3.0）
-
-### 运行单元测试
-
-```bash
-cd audit-book-writing-pro
-
-# 运行所有测试
-python3 run_tests.py
-
-# 运行特定插件测试
-python3 tests/plugins/test_chatlaw_adapter.py
-python3 tests/plugins/test_ai_research_skills_adapter.py
-python3 tests/plugins/test_lexnlp_adapter.py
-python3 tests/plugins/test_zotero_bibtex_adapter.py
-```
-
-### 测试统计
-
-| 插件 | 测试用例数 | 通过率 |
-|------|-----------|--------|
-| ChatLaw | 17 | 100% |
-| ai-research-skills | 17 | 94% |
-| lexnlp | 21 | 100% |
-| zotero-better-bibtex | 21 | 100% |
-| **总计** | **76** | **98.7%** |
 
 ---
 
