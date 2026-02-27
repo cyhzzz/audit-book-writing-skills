@@ -5,8 +5,8 @@
 **审计专业书籍撰写、审核、优化完整工具集**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/Version-3.0-blue.svg)](https://github.com/cyhzzz/audit-book-writing-skills)
-[![Skills](https://img.shields.io/badge/Skills-3-green.svg)](#available-skills)
+[![Version](https://img.shields.io/badge/Version-4.0-blue.svg)](https://github.com/cyhzzz/audit-book-writing-skills)
+[![Skills](https://img.shields.io/badge/Skills-4-green.svg)](#available-skills)
 [![Plugins](https://img.shields.io/badge/Plugins-4-purple.svg)](#integrated-plugins)
 [![Laws](https://img.shields.io/badge/Laws-100-red.svg)](#legal-knowledge-base)
 
@@ -16,10 +16,15 @@
 
 ## 📖 概述
 
-**Audit Book Writing Pro Skills** 是专为审计专业书籍设计的完整工具集，提供从撰写、审核到优化的全流程支持。本仓库包含三个版本，用户可以根据需求灵活选择使用。
+**Audit Book Writing Pro Skills** 是专为审计专业书籍设计的完整工具集，提供从撰写、审核到优化的全流程支持。本仓库包含四个版本，用户可以根据需求灵活选择使用。
 
 ### 核心特点
 
+- ✅ **智能标记系统** - 8种标记类型（法规条文、条款引用、发文字号、地名案例）
+- ✅ **多源法规验证** - 1-8个法规汇总文件交叉验证，确保法规表述准确
+- ✅ **权威案例替换** - 从官方网站查找并替换权威案例，标注来源
+- ✅ **内容智能扩充** - 基于法规自动补充（条文原文+案例+审计应用）
+- ✅ **结构优化整理** - 自动归并重复内容，优化文档结构
 - ✅ **四轮评审系统** - 内容准确性、逻辑连贯性、适用性、格式规范化
 - ✅ **双模式优化** - 修订模式（保守优化）和重构模式（大幅调整）
 - ✅ **多文件留痕输出** - 5个评审文件 + 1个优化稿
@@ -38,23 +43,28 @@
 
 ## 🔄 版本对比
 
-| 特性 | v1.0（基础版） | v2.0（增强版） | v3.0（完整版） |
-|------|--------------|--------------|--------------|
-| 7阶段工作流 | ✅ | ✅ | ✅ |
-| 4轮评审系统 | ✅ | ✅ | ✅ |
-| 标准章节模板 | ✅ | ✅ | ✅ |
-| 数据验证规范 | ✅ | ✅ | ✅ |
-| 双模式优化 | ❌ | ✅ | ✅ |
-| 多文件留痕输出 | ❌ | ✅ | ✅ |
-| 法律法规库（100个文件） | ❌ | ✅ | ✅ |
-| 智能插件系统 | ❌ | ❌ | ✅ |
-| 法规校对（ChatLaw） | ❌ | ❌ | ✅ |
-| 逻辑分析（ai-research-skills） | ❌ | ❌ | ✅ |
-| 术语校对（lexnlp） | ❌ | ❌ | ✅ |
-| 文献校对（zotero-better-bibtex） | ❌ | ❌ | ✅ |
-| 单元测试 | ❌ | ❌ | ✅ |
-| 适用场景 | 快速撰写、初学者 | 严格质量控制、多文件留痕 | 专业用户、智能校对 |
-| 响应速度 | 最快 | 快快 | 较快（插件处理） |
+| 特性 | v1.0（基础版） | v2.0（增强版） | v3.0（完整版） | v4.0（校对优化版） |
+|------|--------------|--------------|--------------|------------------|
+| 7阶段工作流 | ✅ | ✅ | ✅ | ❌ |
+| 4轮评审系统 | ✅ | ✅ | ✅ | ❌ |
+| 标准章节模板 | ✅ | ✅ | ✅ | ❌ |
+| 数据验证规范 | ✅ | ✅ | ✅ | ❌ |
+| 智能标记系统（8种） | ❌ | ❌ | ❌ | ✅ |
+| 多源法规验证 | ❌ | ❌ | ❌ | ✅ |
+| 权威案例替换 | ❌ | ❌ | ❌ | ✅ |
+| 内容智能扩充 | ❌ | ❌ | ❌ | ✅ |
+| 结构优化整理 | ❌ | ❌ | ❌ | ✅ |
+| 双模式优化 | ❌ | ✅ | ✅ | ❌ |
+| 多文件留痕输出 | ❌ | ✅ | ✅ | ❌ |
+| 法律法规库（100个文件） | ❌ | ✅ | ✅ | ❌ |
+| 智能插件系统 | ❌ | ❌ | ✅ | ❌ |
+| 法规校对（ChatLaw） | ❌ | ❌ | ✅ | ❌ |
+| 逻辑分析（ai-research-skills） | ❌ | ❌ | ✅ | ❌ |
+| 术语校对（lexnlp） | ❌ | ❌ | ✅ | ❌ |
+| 文献校对（zotero-better-bibtex） | ❌ | ❌ | ✅ | ❌ |
+| 单元测试 | ❌ | ❌ | ✅ | ❌ |
+| 适用场景 | 快速撰写、初学者 | 严格质量控制、多文件留痕 | 专业用户、智能校对 | 智能校对优化、法规验证 |
+| 响应速度 | 最快 | 快快 | 较快（插件处理） | 中等（多阶段处理） |
 
 ---
 
@@ -112,6 +122,38 @@ npx ai-agent-skills install cyhzzz/audit-book-writing-skills
 - 合规审计 (Compliance Audit)
 
 **适用场景**: 专业用户，需要智能插件支持和完整的质量控制
+
+---
+
+### audit-book-writing-v4 (v4.0 - 智能校对优化版)
+
+**审计书籍智能校对优化技能**
+
+**版本**: 4.0
+**路径**: `audit-book-writing-v4/`
+
+**核心功能**:
+- **智能标记系统** - 8种标记类型（FA1/FA2法规条文、FB1/FB2条款引用、FC1/FC2发文字号、A1/A2地名案例）
+- **多源法规验证** - 支持1-8个法规汇总文件交叉验证，自动修正条款序号和文字表述
+- **权威案例替换** - 从官方网站查找并替换权威案例（优先级：国家文物局 > 浙江省文物局 > 其他省份文物局）
+- **内容智能扩充** - 基于法规自动补充相关内容（法规条文原文 + 相关案例 + 审计应用）
+- **结构优化整理** - 自动识别并归并重复内容，优化"审计内容"与"审计重点"分配
+- **质量保证系统** - 多维度质量检查（法规准确度、案例权威性、内容完整性、结构清晰度）
+
+**适用场景**:
+- 审计书籍章节校对优化
+- 法规类文档审核
+- 案例型文档标准化
+- 审计报告质量提升
+- 文档法规合规性检查
+
+**核心优势**:
+- 法规准确度 100% - 多源交叉验证，确保法规表述准确无误
+- 案例权威性 100% - 强制使用官方网站案例，标注来源网址
+- 内容合规性 100% - 严格围绕审计主题，无离题内容
+- 效率提升 3-5倍 - 自动化处理，大幅提高校对效率
+
+**详细文档**: [audit-book-writing-v4/SKILL.md](audit-book-writing-v4/SKILL.md) | [audit-book-writing-v4/VERSION.md](audit-book-writing-v4/VERSION.md)
 
 ---
 
@@ -203,6 +245,9 @@ npx ai-agent-skills install cyhzzz/audit-book-writing-skills
 
 - [MARKETPLACE.md](MARKETPLACE.md) - 技能市场元数据
 - [INSTALLATION.md](INSTALLATION.md) - 完整安装指南
+- [audit-book-writing-v4/SKILL.md](audit-book-writing-v4/SKILL.md) - v4.0技能说明
+- [audit-book-writing-v4/PROJECT-OVERVIEW.md](audit-book-writing-v4/PROJECT-OVERVIEW.md) - v4.0项目概览
+- [audit-book-writing-v4/docs/EXAMPLE.md](audit-book-writing-v4/docs/EXAMPLE.md) - v4.0使用示例
 - [PROJECT-OVERVIEW.md](audit-book-writing-pro/PROJECT-OVERVIEW.md) - v3.0项目概览
 - [audit-book-writing-v2/VERSION.md](audit-book-writing-v2/VERSION.md) - v2.0版本说明
 - [audit-book-writing-v1/VERSION.md](audit-book-writing-v1/VERSION.md) - v1.0版本说明
@@ -378,13 +423,27 @@ audit-book-writing-skills/
 │       ├── audit-knowledge-base.md
 │       ├── domains-workflow.md
 │       └── laws-database/             # 法律法规库（100个文件）
-└── audit-book-writing-v1/              # v1.0（基础版）
+├── audit-book-writing-v1/              # v1.0（基础版）
+│   ├── SKILL.md                        # 核心技能文档
+│   ├── VERSION.md                      # 版本说明
+│   ├── WORKFLOW.md                     # 7阶段工作流
+│   ├── TEMPLATES.md                    # 模板文件
+│   ├── DOMAINS.md                      # 审计领域分类
+│   └── DATA_VERIFICATION.md            # 数据验证规范
+└── audit-book-writing-v4/              # v4.0（智能校对优化版）
     ├── SKILL.md                        # 核心技能文档
     ├── VERSION.md                      # 版本说明
-    ├── WORKFLOW.md                     # 7阶段工作流
-    ├── TEMPLATES.md                    # 模板文件
-    ├── DOMAINS.md                      # 审计领域分类
-    └── DATA_VERIFICATION.md            # 数据验证规范
+    ├── README.md                       # 项目说明
+    ├── PROJECT-OVERVIEW.md             # 项目概览
+    ├── INSTALLATION.md                 # 安装指南
+    ├── docs/                           # 文档
+    │   └── EXAMPLE.md                # 使用示例
+    ├── references/                     # 参考资料
+    ├── assets/                        # 资源目录
+    ├── src/                           # 源代码目录
+    ├── config.yaml                     # 配置文件
+    ├── requirements.txt               # Python 依赖
+    └── package.json                   # Node.js 配置
 ```
 
 ---

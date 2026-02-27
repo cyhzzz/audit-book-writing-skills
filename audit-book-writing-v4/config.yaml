@@ -1,0 +1,192 @@
+# Audit Book Smart Proofreading v4.0.0 Configuration
+
+# Skill Configuration
+skill_config:
+  version: "4.0.0"
+  max_file_size: 52428800  # 50MB in bytes
+  supported_formats:
+    - ".doc"
+    - ".docx"
+  default_min_word_count: 5000
+
+# Marking Rules Configuration
+marking_rules:
+  enable_FA1: true   # 法规条文
+  enable_FA2: true   # 法规延伸
+  enable_FB1: true   # 条款引用
+  enable_FB2: true   # 条款延伸
+  enable_FC1: true   # 发文字号
+  enable_FC2: true   # 文号延伸
+  enable_A1: true    # 显式地名案例
+  enable_A2: true    # 隐式地名案例
+
+# Identification Rules
+identification_rules:
+  FA1:
+    keywords:
+      - "根据《"
+      - "依据《"
+      - "按照《"
+    patterns:
+      - "《.*?法》"
+      - "《.*?条例》"
+      - "《.*?规定》"
+    description: "直接属于法律法规条文的内容"
+
+  FA2:
+    keywords:
+      - "上述规定"
+      - "该条款"
+      - "据此"
+    description: "与法规条文相关的延伸内容"
+
+  FB1:
+    pattern: "第[一二三四五六七八九十百千]+条"
+    description: "含有\"第××条\"形式的内容"
+
+  FB2:
+    keywords:
+      - "该条"
+      - "上述条款"
+      - "本条"
+    description: "与条款引用相关的延伸内容"
+
+  FC1:
+    pattern: "\\w+\\[20[0-9]{2}\\]\\d+号"
+    description: "含有发文字号的内容"
+
+  FC2:
+    keywords:
+      - "该文件"
+      - "此通知"
+      - "规定文件"
+    description: "与发文字号相关的延伸内容"
+
+  A1:
+    description: "含有具体地名的案例"
+    place_types:
+      - "省"
+      - "市"
+      - "区"
+      - "县"
+    famous_sites:
+      - "北京周口店"
+      - "西安半坡"
+      - "湖北荆州"
+      - "浙江河姆渡"
+
+  A2:
+    description: "含有隐含地名的案例"
+    patterns:
+      - "某省"
+      - "某市"
+      - "某区"
+      - "某县"
+      - "某地"
+
+# Verification Rules
+verification_rules:
+  max_regulation_files: 8
+  similarity_threshold: 0.7
+  strict_mode: true
+
+# Case Replacement Rules
+case_replacement_rules:
+  priority_sites:
+    - "国家文物局官方网站"
+    - "浙江省文物局官方网站"
+    - "其他各省文物局官方网站"
+  max_search_results: 5
+  allow_case_deletion: true
+  forbid_imagination: true
+
+# Website URLs
+website_urls:
+  ncha: "http://www.ncha.gov.cn"
+  zjwwj: "http://wwj.zj.gov.cn"
+
+# Content Expansion Rules
+content_expansion_rules:
+  max_expansion_per_regulation: 3
+  include_audit_application: true
+  include_source_url: true
+  forbid_off_topic: true
+  forbid_financial_content: true
+
+# Expansion Template
+expansion_template: |
+  ### [法规名称] - 第×条
+
+  #### 法规条文原文
+  > [完整的法规条文内容]
+
+  #### 相关案例
+  [案例描述]
+  **来源:** [完整网址]
+
+  #### 审计应用
+  - 审计要点1: [说明]
+  - 审计要点2: [说明]
+  - 审计方法: [说明]
+
+# Structure Optimization Rules
+structure_optimization_rules:
+  merge_duplicate_content: true
+  resolve_conflicts: true
+  preserve_structure: true
+
+# Audit Content vs Focus Assignment
+content_assignment:
+  audit_content:
+    - "审计目标"
+    - "审计范围"
+    - "审计对象"
+    - "基础审计程序"
+    - "常规审计方法"
+    - "审计工作规范"
+
+  audit_focus:
+    - "高风险领域"
+    - "关键控制点"
+    - "典型问题"
+    - "审计发现的常见类型"
+    - "需要重点关注的内容"
+
+# Output Configuration
+output_config:
+  generate_pdf_report: true
+  generate_json_reports: true
+  generate_execution_log: true
+  output_dir: "./output"
+  log_dir: "./logs"
+
+# Output Files
+output_files:
+  final_document: "{document_name}_校对后.doc"
+  summary_report: "校对优化完成报告.pdf"
+  marking_report: "标记报告.json"
+  verification_report: "验证报告.json"
+  replacement_report: "替换报告.json"
+  expansion_report: "扩充报告.json"
+  optimization_report: "结构优化报告.json"
+  execution_log: "执行日志.txt"
+
+# Quality Check Checklist
+quality_check_list:
+  - "法规条文表述准确，条款序号正确"
+  - "所有案例均来自官方网站，标注来源网址"
+  - "无联想编造内容"
+  - "严格围绕审计主题，无离题内容"
+  - "未涉及资金使用相关内容（除非主题明确要求）"
+  - "字数达到要求（≥5000字）"
+  - "重复内容已归并，逻辑冲突已消除"
+  - "\"审计内容\"与\"审计重点\"分工明确"
+  - "文档结构清晰，逻辑连贯"
+  - "所有报告文件生成完整"
+
+# Quality Targets
+quality_targets:
+  regulation_accuracy: 100
+  case_authority: 100
+  content_integrity: 100
+  structure_clarity: 100
